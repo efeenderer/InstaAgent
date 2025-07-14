@@ -39,7 +39,7 @@ pip install -r requirements.txt
 
 # Add your Groq API key in a `.env` file
 echo "GROQ_API_KEY=your_key_here" > .env
-
+```
 
 ## 🔒WARNING🔒
 
