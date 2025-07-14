@@ -1,0 +1,8 @@
+instagrapi
+openai
+jsonschema
+SQLAlchemy
+python-dotenv
+pandas
+groq
+
