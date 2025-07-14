@@ -1,20 +1,32 @@
-# 🛍️ InstaIntent: AI-Powered Intent Classifier for Instagram Sellers
+# 🛍️ InstaIntent: AI-Powered Message Responder for Instagram Sellers
 
-This project is a lightweight yet powerful Python-based AI responder that helps Instagram seller accounts automatically classify customer messages into actionable intents using LLaMA 3 70B via the Groq API.
+**InstaAgent** is a modular AI-powered system designed to help Instagram sellers automatically classify and respond to customer messages (DMs or comments), manage listings, and store all data in a relational database. It uses **LLaMA 3 70B via Groq API** for language understanding and is fully extensible.
 
 ---
 
-## ✨ Features
+## 🔧 Project Goals
 
-- 📥 Handles incoming **DMs or comments**
-- 🔍 Classifies messages into these four intents:
+1. **Intent Detection** ✅
+2. **Canned Responses (based on intent)** 🔄
+3. **Instagram Comment/DM Scraping** ✅ (basic version)
+4. **Message Storage in PostgreSQL** ✅
+5. **Automatic Response Dispatcher** 🔲
+6. **Admin Dashboard / UI** 🔲
+7. **Deployment & Hosting** 🔲
+
+---
+
+## 🤖 What It Does
+
+- Classifies Instagram messages as:
   - `price`
   - `features`
   - `not interested`
   - `other`
-- 🤖 Uses **LLaMA 3 70B** through Groq API for accurate natural language understanding
-- 🧠 Smart logic to prioritize `not interested` even if other intents are present
-- 🔧 Easy to extend with canned responses or message routing logic
+- Uses Groq API and LLaMA 3 70B for high-quality understanding
+- Responds automatically with rule-based or LLM-based replies *(planned)*
+- Fetches **comments** from posts using [`instagrapi`](https://github.com/adw0rd/instagrapi)
+- Saves messages, clients, and listings into a **PostgreSQL** database
 
 ---
 
