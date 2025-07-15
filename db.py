@@ -1,5 +1,5 @@
 from sqlalchemy import create_engine
-from sqlalchemy import Column, Integer, String, Text, Boolean, ForeignKey, DateTime
+from sqlalchemy import Column, Integer, String, Text, Boolean, ForeignKey, DateTime, Enum
 from sqlalchemy.orm import sessionmaker, declarative_base, relationship
 import os
 from dotenv import load_dotenv
@@ -59,7 +59,7 @@ class Message(Base):
     message_text = Column(Text, nullable=False)
     response_text = Column(Text, nullable=True)
     timestamp = Column(DateTime, default=datetime.utcnow)
-    #message_type = Column(, nullable=False) 
+    message_type = Column(Enum(MessageType, name="message_type_enum"), nullable=False) 
     response_sent = Column(Boolean, default=False)
 
     client = relationship("Client", back_populates="messages")

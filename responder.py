@@ -98,6 +98,7 @@ for message, expected in examples:
     -Why is this so damn expensive?     Output: not interested
     -Is it washable? And do you offer discounts?    Output: features-other
     -What's the point of buying this crap?      Output: not interested
+    -Looks fancy, but I doubt it's worth the money. How much?   Output: not interested
 
 
     Note: The output must NOT include anything else but intents. Expressions like "The intent: price" will not be accepted. Only say the intent as "price" or "price-other".

@@ -2,6 +2,7 @@ instagrapi
 openai
 jsonschema
 SQLAlchemy
+pillow
 python-dotenv
 pandas
 groq
