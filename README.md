@@ -67,7 +67,7 @@ psycopg2, SQLAlchemy – For interacting with PostgreSQL
 
 python-dotenv – For environment variable management
 
-##🙌 Acknowledgements
+## 🙌 Acknowledgements
 This project uses the excellent instagrapi library to interact with Instagram's private API.
 Special thanks to the contributors of that project for maintaining such a powerful tool.
 
