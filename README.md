@@ -9,7 +9,7 @@
 1. **Intent Detection** ✅
 2. **Canned Responses (based on intent)** 🔄
 3. **Instagram Comment/DM Scraping** ✅ (basic version)
-4. **Message Storage in PostgreSQL** ✅
+4. **Message Storage in PostgreSQL** 🔲
 5. **Automatic Response Dispatcher** 🔲
 6. **Admin Dashboard / UI** 🔲
 7. **Deployment & Hosting** 🔲
