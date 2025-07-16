@@ -4,10 +4,12 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-account_username = os.environ.get("INSTAGRAM_USERNAME") 
-account_password = os.environ.get("INSTAGRAM_PASSWORD") 
+
 
 cl = Client()
+
+account_username = os.environ.get("INSTAGRAM_USERNAME") 
+account_password = os.environ.get("INSTAGRAM_PASSWORD")
 
 cl.login(account_username,account_password)
 
@@ -16,6 +18,16 @@ target_id = cl.user_id_from_username(account_username)
 medias = cl.user_medias_v1(target_id)
 
 print(len(medias))
+
+
+
+threads = cl.direct_threads()
+print(f"Threads len: {len(threads)}         Threads: {threads}")
+
+for thread in threads:
+    print("threads")
+    messages = cl.direct_messages(thread_id=thread.id)
+    print(messages)
 
 
 for media in medias:
@@ -29,12 +41,8 @@ for media in medias:
     for idx, comment in enumerate(comments):
         
         print(f"Comment {idx+1}: Comment text: {comment.text}, User: {comment.user.username}, UserID: {comment.user.pk}")
-        
-        try:
-            comment_comments = cl.media_comments(comment.pk)
-            print(f"Comments of the comment: {comment_comments}")
-        except:
-            continue
+
+
 
 
 
