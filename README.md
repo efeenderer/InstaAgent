@@ -30,6 +30,11 @@
 
 ---
 
+##🗃️ Database
+All customer messages, post metadata, and detected intents are stored in a PostgreSQL database.
+
+🛠️ The full database schema and ER diagram will be added once development is complete.
+
 ## 🧠 Example Intents
 
 | Message | Intent |
@@ -52,6 +57,19 @@ pip install -r requirements.txt
 # Add your Groq API key in a `.env` file
 echo "GROQ_API_KEY=your_key_here" > .env
 ```
+
+## 📦 Dependencies
+instagrapi – Used for fetching comments and DMs from Instagram
+
+groq – Used to access LLaMA 3 70B models via the Groq API
+
+psycopg2, SQLAlchemy – For interacting with PostgreSQL
+
+python-dotenv – For environment variable management
+
+## 🙌 Acknowledgements
+This project uses the excellent instagrapi library to interact with Instagram's private API.
+Special thanks to the contributors of that project for maintaining such a powerful tool.
 
 ## 🔒WARNING🔒
 
